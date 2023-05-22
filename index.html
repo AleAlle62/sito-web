@@ -6,26 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font -->
+    <script src="https://kit.fontawesome.com/c88a405b1b.js" crossorigin="anonymous"></script>
     <title>Alessio Allegrini</title>
 </head>
-<body>
+<body class="font-sans">
     <!-- titolo -->
-    <header class="bg-white-500 py-4">
-        <div class="container mx-auto text-center">
-        <h1 class="text-blue-700 text-3xl md:text-4xl lg:text-5xl">"Hello Word"</h1>
-        <p class="text-blue-700 text-lg md:text-xl lg:text-2xl mt-4">I'm Alessio Allegrini</p>
+    <header class="bg-white-500">
+        <div class="container mx-auto text-center mt-12">
+        <h1 class="text-6xl md:text-6xl lg:text-9xl hover:scale-150 transition custom-title">"Hello Word"</h1>
+        <style>
+            @keyframes rainbow-animation {
+            0% { color: red; }
+            14.28% { color: orange; }
+            28.57% { color: yellow; }
+            42.85% { color: green; }
+            57.14% { color: blue; }
+            71.42% { color: indigo; }
+            85.71% { color: violet; }
+            100% { color: red; }
+            }
+            .custom-title {
+            animation: rainbow-animation 5s linear infinite;
+            }
+        </style>
+
+        <p class="text-lg md:text-xl lg:text-2xl mt-4 hover:scale-125 transition">I'm Alessio Allegrini</p>
         </div>
     </header>
     <!-- parte centrale -->
-    <main class="bg-white-500 py-4 container mx-auto text-center">
-        <div class="text-blue-700 text-3xl md:text-4xl lg:text-5xl">ABOUT ME</div>
-        <div class="text-blue-700 text-3xl md:text-4xl lg:text-5xl">sono un junior full stack developer residente a Lucca(LU). Sono da anni appassionato di informatica e da tutto ciò che ne fa parte. Ho frequentato il corso intensivo di Boolean per e mi sono appassionato ancora di piu alla programmazione web. Amo i videogiochi e lo sport, infatti gioco a basket da piu di 15 anni</div>
-        <div class= "flex justify-center items-center">
-            <img src="img/profilo.jpeg" style="height: 100px;">
+    <main class="bg-white-500 py-4 container mx-auto text-center mt-72">
+        <div class="text-lg md:text-4xl lg:text-6xl mt-4 hover:scale-125 transition">ABOUT ME</div>
+        
+        <div class="flex justify-between gap-10 items-center mt-8">
+        <div class="mt-10 md:w-2/3 lg:w-1/2 text-2xl md:text-3xl lg:text-4xl hover:scale-105 transition flex flex-col gap-10"><i class="fa-solid fa-location-dot" style="color: #0be039;"></i> Sono un junior full stack web developer residente a Lucca (LU)
+        </div>
+        <div class="mt-10 md:w-2/3 lg:w-1/2 text-2xl md:text-3xl lg:text-4xl hover:scale-105 transition flex flex-col gap-10"><i class="fa-solid fa-code" style="color: #0bc0e0;"></i> Ho frequentato il corso di Boolean</div>
+        <div class="mt-10 md:w-2/3 lg:w-1/2 text-2xl md:text-3xl lg:text-4xl hover:scale-105 transition flex flex-col gap-10"> <i class="fa-solid fa-basketball " style="color: #e0550b;"></i>></i>Amo i videogiochi e lo sport, infatti gioco a basket da più di 15 anni</div>
         </div>
     </main>
     <!-- SKILL -->
-    <div class="bg-white-500 py-4 container mx-auto text-center">
+    <div class="mt-60 bg-white-500 py-4 container mx-auto text-center">
         <div class="text-blue-700 text-3xl md:text-4xl lg:text-5xl">SKILLS</div>
         <div class="flex justify-center flex-wrap gap-7 ">
             <div class="">HTML5</div>
@@ -88,6 +109,45 @@
         </div>
     </div>
     <!-- footer -->
+    <footer class="bg-blue-700 py-6">
+        <div class="container mx-auto px-4">
+        <div class="flex flex-wrap items-center justify-between">
+            <div class="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-0">
+            <h3 class="text-white text-lg font-semibold">Informazioni</h3>
+            <ul class="mt-4">
+                <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Chi siamo</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contatti</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Termini e condizioni</a></li>
+            </ul>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-0">
+            <h3 class="text-white text-lg font-semibold">Social</h3>
+            <ul class="mt-4">
+                <li>
+                    <a href="https://www.instagram.com/alessioallegrini_/" class="text-gray-400 hover:text-white transition duration-300">Instagram</a>
+                    <i class="fa-brands fa-instagram" style="color: #f5f5f5;"></i>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/alessio-allegrini00/" class="text-gray-400 hover:text-white transition duration-300">Linkedin</a>
+                    <i class="fa-brands fa-linkedin" style="color: #ffffff;"></i>
+                </li>
+                <li>
+                    <a href="https://github.com/AleAlle62" class="text-gray-400 hover:text-white transition duration-300">GitHub</a>
+                    <i class="fa-brands fa-github" style="color: #ffffff;"></i>
+                </li>
+            </ul>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-0">
+            <h3 class="text-white text-lg font-semibold">Contatti</h3>
+            <p class="text-gray-400 mt-4 hover:text-white transition duration-300">Email: allegrini.alessio00@gmail.com</p>
+            <p class="text-gray-400 hover:text-white transition duration-300">Telefono: +39 329 612 4488</p>
+            </div>
+        </div>
+        <hr class="border-gray-700 my-6">
+        <p class="text-gray-400 text-sm text-center">© 2023 Alessio Allegrini. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
 </body>
 </html>
+
 
