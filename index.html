@@ -11,10 +11,93 @@
     <title>Alessio Allegrini</title>
 </head>
 <body class="font-sans">
+
+    <!-- navbar -->
+
+    <!-- <nav class="navbar bg-gray-800">
+        <ul class="text-white navbar-list flex justify-between items-center">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#skill">SKILL</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav> -->
+
+    <nav class="navbar bg-blue-600 fixed w-full top-0 z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-2">
+            <div class="text-white font-semibold text-lg">
+                <a href="#home"><i class="fa-solid fa-house"></i></a>
+            </div>
+            <div class="lg:hidden">
+                <button
+                type="button"
+                class="text-white hover:text-gray-300 focus:text-gray-300 focus:outline-none"
+                aria-controls="mobile-menu"
+                aria-expanded="false">
+                <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            </div>
+            <ul
+                class="hidden lg:flex lg:items-center lg:w-auto"
+                id="mobile-menu"
+            >
+            <li>
+                <a href="#home" class="text-white hover:text-gray-300 px-4 py-2">HOME</a>
+            </li>
+            <li>
+                <a href="#skill" class="text-white hover:text-gray-300 px-4 py-2">SKILL</a>
+            </li>
+            <li>
+                <a href="#projects" class="text-white hover:text-gray-300 px-4 py-2">PROJECTS</a>
+            </li>
+            <li>
+                <a href="#contact" class="text-white hover:text-gray-300 px-4 py-2">CONTACT</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+
+    <style>
+        @media (max-width: 1023px) {
+        .navbar-list {
+            display: none;
+        }
+        .navbar-list.show {
+            display: block;
+        }
+    }
+
+    </style>
+
+    <script>
+        const mobileMenuButton = document.querySelector("[aria-controls='mobile-menu']");
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenuButton.addEventListener("click", function () {
+        const expanded = this.getAttribute("aria-expanded") === "true" || false;
+        this.setAttribute("aria-expanded", !expanded);
+        mobileMenu.classList.toggle("show");
+        });
+    </script>
+
+
+
     <!-- titolo -->
-    <header class="bg-white-500">
-        <div class="container mx-auto text-center mt-12">
-        <h1 class="text-6xl md:text-6xl lg:text-9xl hover:scale-150 transition custom-title">"Hello Word"</h1>
+    <header id="home" class="bg-white-500">
+        <div class="container mx-auto text-center mt-72">
+        <h1 class="text-6xl md:text-6xl lg:text-9xl hover:scale-150 transition custom-title">"Hello World"</h1>
         <style>
             @keyframes rainbow-animation {
             0% { color: red; }
@@ -32,6 +115,52 @@
         </style>
 
         <p class="text-lg md:text-xl lg:text-2xl mt-4 hover:scale-125 transition">I'm Alessio Allegrini</p>
+        </div>
+        <div class="flex flex-col justify-center text-center mt-10">
+            <div>scorri giu</div>
+            <div class="arrow-container">
+                <i class="fa-solid fa-arrow-down freccia animate-bounce mt-5"></i>
+            </div>
+            <style>
+                @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            }
+
+            @keyframes color-change {
+            0%, 50% {
+                color: blue;
+            }
+            51%, 100% {
+                color: red;
+            }
+            }
+
+            .freccia {
+            font-size: x-large;
+            color: rgb(0, 47, 255);
+            animation: bounce 1s infinite;
+            animation-delay: 0.5s;
+            animation-timing-function: ease-in-out;
+            cursor: pointer;
+            transition: color 0.5s;
+            }
+
+            .freccia:hover {
+            animation-play-state: paused;
+            }
+
+            .freccia:active {
+            animation-play-state: running;
+            animation: color-change 2s infinite;
+            }
+            </style>
+
+
         </div>
     </header>
     <!-- parte centrale -->
@@ -57,9 +186,9 @@
     </div>
 
     <!-- SKILL -->
-    <div class="mt-60 bg-white-500 py-4 container mx-auto text-center">
+    <div id="skill" class="mt-60 bg-white-500 py-4 container mx-auto text-center">
         <div class="custom-title text-3xl md:text-4xl lg:text-5xl hover:scale-110 transition">MY SKILLS</div>
-        <div class="mt-32 flex justify-center flex-wrap gap-72 text-9xl ">
+        <div class="mt-32 flex justify-center flex-wrap gap-56 text-9xl ">
             <div class="hover:scale-110 transition">
                 <i class="fa-brands fa-html5" style="color: orange;"></i>
             </div>
@@ -90,7 +219,7 @@
         </div>
     </div>
     <!-- progetti -->
-    <div class="bg-white-500 py-4 container mx-auto text-center mt-72">
+    <div id="projects" class="bg-white-500 py-4 container mx-auto text-center mt-72">
         <div class="custom-title text-3xl md:text-4xl lg:text-5xl hover:scale-110 transition">MY PROJECTS</div>
         <!-- card -->
         <div class="flex flex-wrap justify-center mt-36">
@@ -149,7 +278,7 @@
         </div>
     </div>
     <!-- footer -->
-    <footer class="bg-blue-700 py-6 mt-64">
+    <footer id="contact" class="bg-blue-700 py-6 mt-64">
         <div class="container mx-auto px-4">
         <div class="flex flex-wrap items-center justify-between">
             <div class="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-0">
