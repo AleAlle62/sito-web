@@ -12,8 +12,10 @@
     <!-- bootstrap  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
-<body class="font-sans">
+<bo class="font-sans">
+
 
     <!-- navbar -->
 
@@ -50,11 +52,14 @@
     </nav> -->
     <div class="navbar">
         <a href="#" class="navbar-logo"><i class="fa-solid fa-house"></i></a>
-        <label for="dark-mode-toggle" class="dark-mode-toggle"> 
+        <label for="dark-mode-toggle" class="dark-mode-toggle">
             <input type="checkbox" id="dark-mode-toggle"/>
-            <span class="toggle"></span>
+            <i class="fa-solid fa-sun"></i>
         </label>
     </div>
+    
+
+
     <style>
         body {
     /* Stili predefiniti per la modalità chiara */
@@ -62,11 +67,18 @@
     color: #000000;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    flex-grow: 1;
+    text-align: center;
+}
+
 .dark-mode-toggle {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 20px;
     margin-left: 10px;
 }
 
@@ -74,21 +86,9 @@
     display: none;
 }
 
-.dark-mode-toggle .toggle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.dark-mode-toggle input[type="checkbox"]:checked + .toggle {
-    transform: translateX(20px);
-    background-color: #ffffff;
+.fa-sun {
+    font-size: 24px;
+    margin-right: 8px;
 }
 
 .dark {
@@ -102,14 +102,25 @@
     
 
     <script>
-        var darkModeToggle = document.getElementById("dark-mode-toggle");
+var darkModeToggle = document.getElementById('dark-mode-toggle');
 var body = document.body;
 
-darkModeToggle.addEventListener("change", function () {
-    body.classList.toggle("dark");
+darkModeToggle.addEventListener('change', function() {
+    if (this.checked) {
+        body.classList.add('dark');
+    } else {
+        body.classList.remove('dark');
+    }
 });
 
+
     </script>
+
+
+
+
+
+
     <!-- titolo -->
     <header id="home" class="bg-white-500">
         <div class="container mx-auto text-center mt-72">
@@ -133,7 +144,6 @@ darkModeToggle.addEventListener("change", function () {
         <p class="text-lg md:text-xl lg:text-2xl mt-4 hover:scale-125 transition">I'm Alessio Allegrini</p>
         </div>
         <div class="flex flex-col justify-center text-center mt-10">
-            <div>scorri giu</div>
             <div class="arrow-container">
                 <i class="fa-solid fa-arrow-down freccia animate-bounce mt-5"></i>
             </div>
@@ -204,7 +214,7 @@ darkModeToggle.addEventListener("change", function () {
     <!-- SKILL -->
     <div id="skill" class="mt-60 bg-white-500 py-4 container mx-auto text-center">
         <div class="custom-title text-3xl md:text-4xl lg:text-5xl hover:scale-110 transition">MY SKILLS</div>
-        <div class="mt-32 flex justify-center flex-wrap gap-56 text-9xl ">
+        <div class="mt-32 flex justify-center flex-wrap gap-28 text-9xl ">
             <div class="hover:scale-110 transition">
                 <i class="fa-brands fa-html5" style="color: orange;"></i>
             </div>
@@ -244,21 +254,21 @@ darkModeToggle.addEventListener("change", function () {
                 <img src="img/img sito.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
                 <h3 class="text-xl font-semibold mt-4">DropBox</h3>
                 <p class="text-gray-700 mt-2">riproduzione del sito DropBox</p>
-                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline" href="https://github.com/AleAlle62/htmlcss-dropbox"> <i class="fa-brands fa-github"></i>repository</a>
+                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/htmlcss-dropbox"> <i class="fa-brands fa-github text-black"></i>repository</a>
             </div>
             <!-- card -->
             <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
                 <img src="img/img sito 2.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
                 <h3 class="text-xl font-semibold mt-4">Netflix</h3>
                 <p class="text-gray-700 mt-2">Riproduzione del sito Netflix desktop, con utilizzo di API per la ricerca dei film</p>
-                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline" href="https://github.com/AleAlle62/vue-boolflix"> <i class="fa-brands fa-github"></i>repository</a>
+                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/vue-boolflix"> <i class="fa-brands fa-github text-black"></i>repository</a>
             </div>
             <!-- card -->
             <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
                 <img src="img/img sito 3.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
                 <h3 class="text-xl font-semibold mt-4">Whatsapp</h3>
                 <p class="text-gray-700 mt-2">riproduzione dell'app di messaggistica con varie funzioni automatiche</p>
-                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline" href="https://github.com/AleAlle62/vue-boolzapp"> <i class="fa-brands fa-github"></i>repository</a>
+                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/vue-boolzapp"> <i class="fa-brands fa-github text-black"></i>repository</a>
             </div>
             
             <!-- card -->
@@ -266,7 +276,7 @@ darkModeToggle.addEventListener("change", function () {
                 <img src="img/img sito 4.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
                 <h3 class="text-xl font-semibold mt-4">Spotify</h3>
                 <p class="text-gray-700 mt-2">riproduzione del player musica Spotify</p>
-                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline" href="https://github.com/AleAlle62/html-css-spotifyweb"> <i class="fa-brands fa-github"></i>repository</a>
+                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/html-css-spotifyweb text-black"> <i class="fa-brands fa-github text-black"></i>repository</a>
             </div>
     
             <!-- card -->
@@ -274,7 +284,7 @@ darkModeToggle.addEventListener("change", function () {
                 <img src="img/img sito 5.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
                 <h3 class="text-xl font-semibold mt-4">Playstation</h3>
                 <p class="text-gray-700 mt-2">riproduzione del sito di PlayStation</p>
-                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline" href="https://github.com/AleAlle62/htmlcss-playstation"> <i class="fa-brands fa-github"></i>repository</a>
+                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/htmlcss-playstation"> <i class="fa-brands fa-github text-black"></i>repository</a>
             </div>
     
             <!-- card -->
@@ -282,17 +292,23 @@ darkModeToggle.addEventListener("change", function () {
                 <img src="img/img sito 6.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
                 <h3 class="text-xl font-semibold mt-4">To Do List</h3>
                 <p class="text-gray-700 mt-2">Crezione di una ToDoList con tutte le sue funzionalità</p>
-                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline" href="https://github.com/AleAlle62/vue-todolist"> <i class="fa-brands fa-github"></i>repository</a>
+                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/vue-todolist"> <i class="fa-brands fa-github text-black"></i>repository</a>
             </div>
             <!-- card -->
             <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
                 <img src="img/img sito 7.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
                 <h3 class="text-xl font-semibold mt-4">Portfolio</h3>
                 <p class="text-gray-700 mt-2">Crezione del mio portfolio personale</p>
-                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline" href="https://github.com/AleAlle62/sito-web"> <i class="fa-brands fa-github"></i>repository</a>
+                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/sito-web"> <i class="fa-brands fa-github text-black"></i>repository</a>
             </div>
         </div>
     </div>
+
+    
+
+
+
+
     <!-- footer -->
     <footer id="contact" class="bg-blue-700 py-6 mt-64">
         <div class="container mx-auto px-4">
@@ -326,5 +342,15 @@ darkModeToggle.addEventListener("change", function () {
     </footer>
 
 
+
+
+
+    <section>
+        
+    </section>
+
+    
+
+    
 </body>
 </html>
