@@ -14,42 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
-<bo class="font-sans">
-
-
-    <!-- navbar -->
-
-    <!-- <nav class="navbar bg-blue-600 ">
-        <ul class="text-white navbar-list flex justify-center items-center">
-            <li><a href="#home"><i class="fa-solid fa-house"></i></a></li>
-        </ul>
-    </nav> -->
-
-    <style>
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #0e75e3;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-        }
-
-        .navbar-logo {
-            color: #fff;
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-    </style>
-
-    <!-- <nav class="navbar">
-        <a href="#" class="navbar-logo"><i class="fa-solid fa-house"></i></a>
-    </nav> -->
+    <!-- NAVBAR  -->
     <div class="navbar">
         <a href="#" class="navbar-logo"><i class="fa-solid fa-house"></i></a>
         <label for="dark-mode-toggle" class="dark-mode-toggle">
@@ -57,266 +22,157 @@
             <i class="fa-solid fa-sun"></i>
         </label>
     </div>
-    
+    <!-- FINE NAVBAR -->
 
 
-    <style>
-        body {
-    /* Stili predefiniti per la modalità chiara */
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-logo {
-    flex-grow: 1;
-    text-align: center;
-}
-
-.dark-mode-toggle {
-    margin-left: 10px;
-}
-
-.dark-mode-toggle input[type="checkbox"] {
-    display: none;
-}
-
-.fa-sun {
-    font-size: 24px;
-    margin-right: 8px;
-}
-
-.dark {
-    /* Stili per la modalità scura */
-    background-color: #222222;
-    color: #ffffff;
-}
-
-
-    </style>
-    
-
-    <script>
-var darkModeToggle = document.getElementById('dark-mode-toggle');
-var body = document.body;
-
-darkModeToggle.addEventListener('change', function() {
-    if (this.checked) {
-        body.classList.add('dark');
-    } else {
-        body.classList.remove('dark');
-    }
-});
-
-
-    </script>
-
-
-
-
-
-
-    <!-- titolo -->
+    <!-- TITOLO -->
     <header id="home" class="bg-white-500">
         <div class="container mx-auto text-center mt-72">
-        <h1 class="text-6xl md:text-6xl lg:text-9xl hover:scale-150 transition custom-title">"Hello World"</h1>
-        <style>
-            @keyframes rainbow-animation {
-            0% { color: red; }
-            14.28% { color: orange; }
-            28.57% { color: yellow; }
-            42.85% { color: green; }
-            57.14% { color: blue; }
-            71.42% { color: indigo; }
-            85.71% { color: violet; }
-            100% { color: red; }
-            }
-            .custom-title {
-            animation: rainbow-animation 5s linear infinite;
-            }
-        </style>
-
-        <p class="text-lg md:text-xl lg:text-2xl mt-4 hover:scale-125 transition">I'm Alessio Allegrini</p>
+            <h1 class="text-6xl md:text-6xl lg:text-9xl hover:scale-150 transition custom-title">"Hello World"</h1>
+            <p class="text-lg md:text-xl lg:text-2xl mt-4 hover:scale-125 transition">I'm Alessio Allegrini</p>
         </div>
         <div class="flex flex-col justify-center text-center mt-10">
             <div class="arrow-container">
                 <i class="fa-solid fa-arrow-down freccia animate-bounce mt-5"></i>
             </div>
-            <style>
-                @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-            }
-
-            @keyframes color-change {
-            0%, 50% {
-                color: blue;
-            }
-            51%, 100% {
-                color: red;
-            }
-            }
-
-            .freccia {
-            font-size: x-large;
-            color: rgb(0, 47, 255);
-            animation: bounce 1s infinite;
-            animation-delay: 0.5s;
-            animation-timing-function: ease-in-out;
-            cursor: pointer;
-            transition: color 0.5s;
-            }
-
-            .freccia:hover {
-            animation-play-state: paused;
-            }
-
-            .freccia:active {
-            animation-play-state: running;
-            animation: color-change 2s infinite;
-            }
-            </style>
-
-
         </div>
     </header>
-    <!-- parte centrale -->
-    <div class="flex justify-center flex-wrap mt-72 text-center text-2xl ">
-        <!-- card 1 -->
-        <div class="bg-white rounded-lg shadow-lg m-4 p-6 w-64 hover:scale-110 transition border border-black-300">
-            <i class="fa-solid fa-location-dot" style="color: green;"></i>
-            <h3 class="text-xl font-semibold mt-4">WHERE</h3>
-            <p class="text-gray-700 mt-2">I live in Lucca, Tuscany (LU)</p>
+
+    <!-- PARTE CENTRALE -->
+    <section>
+        <div class="flex justify-center flex-wrap mt-72 text-center text-2xl ">
+            <!-- card 1 -->
+            <div class="bg-white rounded-lg shadow-lg m-4 p-6 w-64 hover:scale-110 transition border border-black-300">
+                <i class="fa-solid fa-location-dot" style="color: green;"></i>
+                <h3 class="text-xl font-semibold mt-4">WHERE</h3>
+                <p class="text-gray-700 mt-2">I live in Lucca, Tuscany (LU)</p>
+            </div>
+            <!-- card 2 -->
+            <div class="bg-white rounded-lg shadow-lg m-4 p-6 w-64 hover:scale-110 transition border border-black-300">
+                <i class="fa-solid fa-code" style="color: blue;"></i>
+                <h3 class="text-xl font-semibold mt-4">WHAT</h3>
+                <p class="text-gray-700 mt-2">I'm a Full Stack Web Developer</p>
+            </div>
+            <!-- card 3 -->
+            <div class="bg-white rounded-lg shadow-lg m-4 p-6 w-64 hover:scale-110 transition border border-black-300">
+                <i class="fa-solid fa-basketball" style="color: orange;"></i>
+                <h3 class="text-xl font-semibold mt-4">ELSE</h3>
+                <p class="text-gray-700 mt-2">i like play videogames and sports. I love basketball</p>
+            </div>
         </div>
-        <!-- card 2 -->
-        <div class="bg-white rounded-lg shadow-lg m-4 p-6 w-64 hover:scale-110 transition border border-black-300">
-            <i class="fa-solid fa-code" style="color: blue;"></i>
-            <h3 class="text-xl font-semibold mt-4">WHAT</h3>
-            <p class="text-gray-700 mt-2">I'm a Full Stack Web Developer</p>
-        </div>
-        <!-- card 3 -->
-        <div class="bg-white rounded-lg shadow-lg m-4 p-6 w-64 hover:scale-110 transition border border-black-300">
-            <i class="fa-solid fa-basketball" style="color: orange;"></i>
-            <h3 class="text-xl font-semibold mt-4">ELSE</h3>
-            <p class="text-gray-700 mt-2">i like play videogames and sports. I love basketball</p>
-        </div>
-    </div>
+    </section>
+    <!-- FINE PARTE CENTRALE  -->
 
     <!-- SKILL -->
-    <div id="skill" class="mt-60 bg-white-500 py-4 container mx-auto text-center">
-        <div class="custom-title text-3xl md:text-4xl lg:text-5xl hover:scale-110 transition">MY SKILLS</div>
-        <div class="mt-32 flex justify-center flex-wrap gap-28 text-9xl ">
-            <div class="hover:scale-110 transition">
-                <i class="fa-brands fa-html5" style="color: orange;"></i>
-            </div>
-            <div class="hover:scale-110 transition">
-                <i class="fa-brands fa-css3-alt" style="color: rgb(0, 47, 255);"></i>
-            </div>
-            <div class="hover:scale-110 transition">
-                <i class="fa-brands fa-js" style="color: rgb(217, 255, 0);"></i>
-            </div>
-            <div class="hover:scale-110 transition">
-                <i class="fa-brands fa-vuejs" style="color: rgb(6, 127, 44);"></i>
-            </div>
-            <div class="hover:scale-110 transition">
-                <i class="fa-brands fa-sass" style="color: rgb(255, 0, 242);"></i>
-            </div>
-            <div class="hover:scale-110 transition">
-                <i class="fa-brands fa-bootstrap " style="color: rgb(230, 0, 255);"></i>
-            </div>
-            <div class="text-5xl text-center text-transparent bg-gradient-to-r from-blue-400 to-blue-800 bg-clip-text hover:scale-110 transition font-semibold">tailwindcss</div>
-            <div class="hover:scale-110 transition">
-                <i class="fa-brands fa-php" style="color: rgb(0, 0, 255);"></i>
-            </div>
-            <div class="hover:scale-110 transition">
-                <i class="fa-brands fa-laravel" style="color: rgb(255, 4, 0);"></i>
-            </div>
-            <div class="text-5xl text-center text-transparent bg-gradient-to-r from-violet-700 to-violet-900 bg-clip-text hover:scale-110 transition font-semibold">C#</div>
-            <div class="text-5xl text-center text-transparent bg-gradient-to-r text-violet-900 bg-clip-text hover:scale-110 transition font-semibold">.NET</div>
-        </div>
-    </div>
-    <!-- progetti -->
-    <div id="projects" class="bg-white-500 py-4 container mx-auto text-center mt-72">
-        <div class="custom-title text-3xl md:text-4xl lg:text-5xl hover:scale-110 transition">MY PROJECTS</div>
-        <!-- card -->
-        <div class="flex flex-wrap justify-center mt-36">
-            <!-- card 1  -->
-            <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
-                <img src="img/img sito.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
-                <h3 class="text-xl font-semibold mt-4">DropBox</h3>
-                <p class="text-gray-700 mt-2">riproduzione del sito DropBox</p>
-                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/htmlcss-dropbox"> <i class="fa-brands fa-github text-black"></i></a>
-            </div>
-            <!-- card -->
-            <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
-                <img src="img/img sito 2.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
-                <h3 class="text-xl font-semibold mt-4">Netflix</h3>
-                <p class="text-gray-700 mt-2">Riproduzione del sito Netflix desktop, con utilizzo di API per la ricerca dei film</p>
-                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/vue-boolflix"> <i class="fa-brands fa-github text-black"></i></a>
-            </div>
-            <!-- card -->
-            <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
-                <img src="img/img sito 3.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
-                <h3 class="text-xl font-semibold mt-4">Whatsapp</h3>
-                <p class="text-gray-700 mt-2">riproduzione dell'app di messaggistica con varie funzioni automatiche</p>
-                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/vue-boolzapp"> <i class="fa-brands fa-github text-black"></i></a>
-            </div>
-            
-            <!-- card -->
-            <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
-                <img src="img/img sito 4.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
-                <h3 class="text-xl font-semibold mt-4">Spotify</h3>
-                <p class="text-gray-700 mt-2">riproduzione del player musica Spotify</p>
-                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/html-css-spotifyweb text-black"> <i class="fa-brands fa-github text-black"></i></a>
-            </div>
-    
-            <!-- card -->
-            <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
-                <img src="img/img sito 5.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
-                <h3 class="text-xl font-semibold mt-4">Playstation</h3>
-                <p class="text-gray-700 mt-2">riproduzione del sito di PlayStation</p>
-                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/htmlcss-playstation"> <i class="fa-brands fa-github text-black"></i></a>
-            </div>
-    
-            <!-- card -->
-            <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
-                <img src="img/img sito 6.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
-                <h3 class="text-xl font-semibold mt-4">To Do List</h3>
-                <p class="text-gray-700 mt-2">Crezione di una ToDoList con tutte le sue funzionalità</p>
-                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/vue-todolist"> <i class="fa-brands fa-github text-black"></i></a>
-            </div>
-            <!-- card -->
-            <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
-                <img src="img/img sito 7.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
-                <h3 class="text-xl font-semibold mt-4">Portfolio</h3>
-                <p class="text-gray-700 mt-2">Crezione del mio portfolio personale</p>
-                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/sito-web"> <i class="fa-brands fa-github text-black"></i></a>
-            </div>
-            <!-- card -->
-            <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
-                <img src="img/img sito 8.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
-                <h3 class="text-xl font-semibold mt-4">Calcolatrice</h3>
-                <p class="text-gray-700 mt-2">Crezione di una calcolatrice funzionante</p>
-                <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/sito-web"> <i class="fa-brands fa-github text-black"></i></a>
+    <section>
+        <div id="skill" class="mt-60 bg-white-500 py-4 container mx-auto text-center">
+            <div class="custom-title text-3xl md:text-4xl lg:text-5xl hover:scale-110 transition">MY SKILLS</div>
+            <div class="mt-32 flex justify-center flex-wrap gap-28 text-9xl ">
+                <div class="hover:scale-110 transition">
+                    <i class="fa-brands fa-html5" style="color: orange;"></i>
+                </div>
+                <div class="hover:scale-110 transition">
+                    <i class="fa-brands fa-css3-alt" style="color: rgb(0, 47, 255);"></i>
+                </div>
+                <div class="hover:scale-110 transition">
+                    <i class="fa-brands fa-js" style="color: rgb(217, 255, 0);"></i>
+                </div>
+                <div class="hover:scale-110 transition">
+                    <i class="fa-brands fa-vuejs" style="color: rgb(6, 127, 44);"></i>
+                </div>
+                <div class="hover:scale-110 transition">
+                    <i class="fa-brands fa-sass" style="color: rgb(255, 0, 242);"></i>
+                </div>
+                <div class="hover:scale-110 transition">
+                    <i class="fa-brands fa-bootstrap " style="color: rgb(230, 0, 255);"></i>
+                </div>
+                <div class="text-5xl text-center text-transparent bg-gradient-to-r from-blue-400 to-blue-800 bg-clip-text hover:scale-110 transition font-semibold">tailwindcss</div>
+                <div class="hover:scale-110 transition">
+                    <i class="fa-brands fa-php" style="color: rgb(0, 0, 255);"></i>
+                </div>
+                <div class="hover:scale-110 transition">
+                    <i class="fa-brands fa-laravel" style="color: rgb(255, 4, 0);"></i>
+                </div>
+                <div class="text-5xl text-center text-transparent bg-gradient-to-r from-violet-700 to-violet-900 bg-clip-text hover:scale-110 transition font-semibold">C#</div>
+                <div class="text-5xl text-center text-transparent bg-gradient-to-r text-violet-900 bg-clip-text hover:scale-110 transition font-semibold">.NET</div>
             </div>
         </div>
-    </div>
+    </section>
+    <!-- FINE SKILL -->
 
+
+    <!-- PROGETTI -->
+    <section>
+        <div id="projects" class="bg-white-500 py-4 container mx-auto text-center mt-72">
+            <div class="custom-title text-3xl md:text-4xl lg:text-5xl hover:scale-110 transition">MY PROJECTS</div>
+            <!-- card -->
+            <div class="flex flex-wrap justify-center mt-36">
+                <!-- card 1  -->
+                <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
+                    <img src="img/img sito.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
+                    <h3 class="text-xl font-semibold mt-4">DropBox</h3>
+                    <p class="text-gray-700 mt-2">riproduzione del sito DropBox</p>
+                    <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/htmlcss-dropbox"> <i class="fa-brands fa-github text-black"></i></a>
+                </div>
+                <!-- card -->
+                <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
+                    <img src="img/img sito 2.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
+                    <h3 class="text-xl font-semibold mt-4">Netflix</h3>
+                    <p class="text-gray-700 mt-2">Riproduzione del sito Netflix desktop, con utilizzo di API per la ricerca dei film</p>
+                    <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/vue-boolflix"> <i class="fa-brands fa-github text-black"></i></a>
+                </div>
+                <!-- card -->
+                <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
+                    <img src="img/img sito 3.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
+                    <h3 class="text-xl font-semibold mt-4">Whatsapp</h3>
+                    <p class="text-gray-700 mt-2">riproduzione dell'app di messaggistica con varie funzioni automatiche</p>
+                    <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/vue-boolzapp"> <i class="fa-brands fa-github text-black"></i></a>
+                </div>
+                
+                <!-- card -->
+                <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
+                    <img src="img/img sito 4.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
+                    <h3 class="text-xl font-semibold mt-4">Spotify</h3>
+                    <p class="text-gray-700 mt-2">riproduzione del player musica Spotify</p>
+                    <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/html-css-spotifyweb text-black"> <i class="fa-brands fa-github text-black"></i></a>
+                </div>
+        
+                <!-- card -->
+                <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
+                    <img src="img/img sito 5.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
+                    <h3 class="text-xl font-semibold mt-4">Playstation</h3>
+                    <p class="text-gray-700 mt-2">riproduzione del sito di PlayStation</p>
+                    <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/htmlcss-playstation"> <i class="fa-brands fa-github text-black"></i></a>
+                </div>
+        
+                <!-- card -->
+                <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
+                    <img src="img/img sito 6.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
+                    <h3 class="text-xl font-semibold mt-4">To Do List</h3>
+                    <p class="text-gray-700 mt-2">Crezione di una ToDoList con tutte le sue funzionalità</p>
+                    <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/vue-todolist"> <i class="fa-brands fa-github text-black"></i></a>
+                </div>
+                <!-- card -->
+                <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
+                    <img src="img/img sito 7.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
+                    <h3 class="text-xl font-semibold mt-4">Portfolio</h3>
+                    <p class="text-gray-700 mt-2">Crezione del mio portfolio personale</p>
+                    <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/sito-web"> <i class="fa-brands fa-github text-black"></i></a>
+                </div>
+                <!-- card -->
+                <div class="bg-white rounded-lg flex flex-col gap-10 shadow-lg m-4 p-10 w-64 hover:scale-110 transition">
+                    <img src="img/img sito 8.jpeg" alt="Card Image" class="w-full h-40 object-cover rounded-md">
+                    <h3 class="text-xl font-semibold mt-4">Calcolatrice</h3>
+                    <p class="text-gray-700 mt-2">Crezione di una calcolatrice funzionante</p>
+                    <a class="flex gap-5 text-center justify-center font-bold text-2xl hover:underline text-black" href="https://github.com/AleAlle62/sito-web"> <i class="fa-brands fa-github text-black"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FINE SKILL -->
     
 
-
-
-
-    <!-- footer -->
+    <!-- FOOTER -->
     <footer id="contact" class="bg-blue-700 py-6 mt-64">
         <div class="container mx-auto px-4">
         <div class="flex flex-wrap items-center justify-around">
@@ -347,17 +203,131 @@ darkModeToggle.addEventListener('change', function() {
         <p class="text-gray-400 text-sm text-center">© 2023 Alessio Allegrini. Tutti i diritti riservati.</p>
         </div>
     </footer>
+    <!-- FINE FOOTER --> 
+    
 
 
+    <!-- STILE -->
+    <style>
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0e75e3;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
 
+        .navbar-logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    
+        body {
+        background-color: #ffffff;
+        color: #000000;
+        }
 
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    <section>
+        .navbar-logo {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .dark-mode-toggle {
+            margin-left: 10px;
+        }
+
+        .dark-mode-toggle input[type="checkbox"] {
+            display: none;
+        }
+
+        .fa-sun {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+
+        .dark {
+            background-color: #222222;
+            color: #ffffff;
+        }
+
+        @keyframes rainbow-animation {
+
+            0% { color: red; }
+            14.28% { color: orange; }
+            28.57% { color: yellow; }
+            42.85% { color: green; }
+            57.14% { color: blue; }
+            71.42% { color: indigo; }
+            85.71% { color: violet; }
+            100% { color: red; }
+            }
+            .custom-title {
+            animation: rainbow-animation 5s linear infinite;
+        }
         
-    </section>
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
 
-    
+            @keyframes color-change {
+            0%, 50% {
+                color: blue;
+            }
+            51%, 100% {
+                color: red;
+            }
+        }
 
+        .freccia {
+            font-size: x-large;
+            color: rgb(0, 47, 255);
+            animation: bounce 1s infinite;
+            animation-delay: 0.5s;
+            animation-timing-function: ease-in-out;
+            cursor: pointer;
+            transition: color 0.5s;
+        }
+        .freccia:hover {
+            animation-play-state: paused;
+        }
+
+        .freccia:active {
+            animation-play-state: running;
+            animation: color-change 2s infinite;
+        }
+    </style>
+    <!-- FINE STILE  -->
     
+    <!-- JAVASCRIPT -->
+    <script>
+        var darkModeToggle = document.getElementById('dark-mode-toggle');
+        var body = document.body;
+        
+        darkModeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                body.classList.add('dark');
+            } else {
+                body.classList.remove('dark');
+            }
+        });
+    </script>
 </body>
 </html>
