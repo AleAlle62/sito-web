@@ -26,7 +26,8 @@
 
 
     <!-- TITOLO -->
-    <header id="home" class="bg-white-500">
+    
+    <!-- <header id="home" class="bg-white-500">
         <div class="container mx-auto text-center mt-72">
             <h1 class="text-6xl md:text-6xl lg:text-9xl hover:scale-150 transition custom-title">"Hello World"</h1>
             <p class="text-lg md:text-xl lg:text-2xl mt-4 hover:scale-125 transition">I'm Alessio Allegrini</p>
@@ -36,7 +37,103 @@
                 <a href="#giu"><i class="fa-solid fa-arrow-down freccia animate-bounce mt-5"></i></a>
             </div>
         </div>
+    </header> -->
+
+    <header>
+        <h1 class="ml6">
+            <span class="text-wrapper">
+                <span class="letters">Hello World, i'm Alessio Allegrini</span>
+            </span>
+        </h1>
+        <a href="#giu"><i class="fa-solid fa-arrow-down freccia animate-bounce mt-5 d-flex justify-center"></i></a>
     </header>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <style>
+        .ml6 {
+            padding-top: 200px;
+            text-align: center;
+            font-weight: 900;
+            font-size: 3.3em;
+        }
+
+        .ml6 .letter {
+            display: inline-block;
+            line-height: 1em;
+            animation: rainbow 4s infinite;
+        }
+
+    @keyframes rainbow {
+    0% {
+        color: #ff0000; /* rosso */
+    }
+    14% {
+        color: #ff7f00; /* arancione */
+    }
+    28% {
+
+    }
+    42% {
+        color: #00ff00; /* verde */
+    }
+    57% {
+        color: #0000ff; /* blu */
+    }
+    71% {
+        color: #8a2be2; /* indaco */
+    }
+    85% {
+        color: #ff00ff; /* viola */
+    }
+    100% {
+        color: #ff0000; /* rosso */
+    }
+    }
+
+    
+        .ml6 .text-wrapper {
+          /* display: inline-block; */
+            padding-top: 0.2em;
+            padding-right: 0.05em;
+            padding-bottom: 0.1em;
+            overflow: hidden;
+        }
+    
+        .ml6 .letter {
+            display: inline-block;
+            line-height: 1em;
+        }
+    
+        @media (max-width: 768px) {
+            .ml6 {
+            font-size: 2.2em;
+            }
+        }
+        </style>
+    <script>
+        // Wrap every letter in a span
+        var textWrapper = document.querySelector('.ml6 .letters');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    
+        anime.timeline({ loop: true })
+        .add({
+            targets: '.ml6 .letter',
+            translateY: ["1.1em", 0],
+            translateZ: 0,
+            duration: 750,
+            delay: (el, i) => 50 * i
+        }).add({
+            targets: '.ml6',
+            opacity: 0,
+            duration: 1000,
+            easing: "easeOutExpo",
+            delay: 1000
+        });
+    </script>
+    
+
+
+
 
     <!-- PARTE CENTRALE -->
     <section id="giu">
@@ -99,6 +196,38 @@
         </div>
     </section>
     <!-- FINE SKILL -->
+    <script>
+        const icons = document.querySelectorAll('#skill i');
+
+// Aggiungi evento di click a ciascuna icona
+icons.forEach(icon => {
+  icon.addEventListener('click', () => {
+    // Aggiungi una classe per l'effetto divertente
+    icon.classList.add('rotate-animation');
+    
+    // Rimuovi la classe dopo un certo periodo di tempo
+    setTimeout(() => {
+      icon.classList.remove('rotate-animation');
+    }, 1000);
+  });
+});
+    </script>
+
+    <style>
+        .rotate-animation {
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+    </style>
 
 
     <!-- PROGETTI -->
@@ -209,6 +338,7 @@
 
     <!-- STILE -->
     <style>
+
         .navbar {
             position: fixed;
             top: 0;
