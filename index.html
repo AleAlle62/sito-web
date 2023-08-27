@@ -16,7 +16,10 @@
 </head>
     <!-- NAVBAR  -->
     <div class="navbar">
-        <a href="#" class="navbar-logo"><i class="fa-solid fa-house"></i></a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" class="text-black-000 text-2xl">Alessio Allegrini</a>
+        <a href="#" class="navbar-logo flex gap-8 justify-center">
+            <!-- <i class="fa-solid fa-house"></i> -->
+        </a>
         <label for="dark-mode-toggle" class="dark-mode-toggle">
             <input type="checkbox" id="dark-mode-toggle"/>
             <i class="fa-solid fa-sun"></i>
@@ -24,28 +27,16 @@
     </div>
     <!-- FINE NAVBAR -->
 
-
-    <!-- TITOLO -->
-    
-    <!-- <header id="home" class="bg-white-500">
-        <div class="container mx-auto text-center mt-72">
-            <h1 class="text-6xl md:text-6xl lg:text-9xl hover:scale-150 transition custom-title">"Hello World"</h1>
-            <p class="text-lg md:text-xl lg:text-2xl mt-4 hover:scale-125 transition">I'm Alessio Allegrini</p>
-        </div>
-        <div class="flex flex-col justify-center text-center mt-10">
-            <div class="arrow-container">
-                <a href="#giu"><i class="fa-solid fa-arrow-down freccia animate-bounce mt-5"></i></a>
-            </div>
-        </div>
-    </header> -->
-
     <header>
         <h1 class="ml6">
             <span class="text-wrapper">
                 <span class="letters">Hello World, i'm Alessio Allegrini</span>
             </span>
         </h1>
-        <a href="#giu"><i class="fa-solid fa-arrow-down freccia animate-bounce mt-5 d-flex justify-center"></i></a>
+        <div class="flex flex-col gap-4">
+            <a href="#giu"><i class="fa-solid fa-arrow-down freccia animate-bounce mt-5 d-flex justify-center"></i></a>
+            <p style="text-align: center;">scroll down :)</p>
+        </div>
     </header>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
@@ -118,7 +109,7 @@
         anime.timeline({ loop: true })
         .add({
             targets: '.ml6 .letter',
-            translateY: ["1.1em", 0],
+            translateY: ["0.5em", 0],
             translateZ: 0,
             duration: 750,
             delay: (el, i) => 50 * i
@@ -156,6 +147,11 @@
                 <h3 class="text-xl font-semibold mt-4">ELSE</h3>
                 <p class="text-gray-700 mt-2">i like play videogames and sports. I love basketball</p>
             </div>
+            <div class="bg-white rounded-lg shadow-lg m-4 p-6 w-64 hover:scale-110 transition border border-black-300">
+                <i class="fa-solid fa-computer" style="color: rgb(255, 0, 132);"></i>
+                <h3 class="text-xl font-semibold mt-4">WORK</h3>
+                <p class="text-gray-700 mt-2">i work in Lucca. I'm a Front-end Developer for Sunlink </p>
+            </div>
         </div>
     </section>
     <!-- FINE PARTE CENTRALE  -->
@@ -192,6 +188,9 @@
                 </div>
                 <div class="text-5xl text-center text-transparent bg-gradient-to-r from-violet-700 to-violet-900 bg-clip-text hover:scale-110 transition font-semibold">C#</div>
                 <div class="text-5xl text-center text-transparent bg-gradient-to-r text-violet-900 bg-clip-text hover:scale-110 transition font-semibold">.NET</div>
+                <div class="text-5xl text-center text-transparent bg-gradient-to-r text-violet-900 bg-clip-text hover:scale-110 transition font-semibold">TYPESCRIPT</div>
+                <div class="text-5xl text-center text-transparent bg-gradient-to-r text-violet-800 bg-clip-text hover:scale-110 transition font-semibold">ODOO</div>
+                <div class="text-5xl text-center text-transparent bg-gradient-to-r text-violet-900 bg-clip-text hover:scale-110 transition font-semibold">FIGMA</div>
             </div>
         </div>
     </section>
@@ -199,34 +198,66 @@
     <script>
         const icons = document.querySelectorAll('#skill i');
 
-// Aggiungi evento di click a ciascuna icona
-icons.forEach(icon => {
-  icon.addEventListener('click', () => {
-    // Aggiungi una classe per l'effetto divertente
-    icon.classList.add('rotate-animation');
-    
-    // Rimuovi la classe dopo un certo periodo di tempo
-    setTimeout(() => {
-      icon.classList.remove('rotate-animation');
-    }, 1000);
-  });
-});
-    </script>
+        // Aggiungi evento di click a ciascuna icona
+        icons.forEach(icon => {
+        icon.addEventListener('click', () => {
+            // Aggiungi una classe per l'effetto divertente
+            icon.classList.add('rotate-animation');
+            
+            // Rimuovi la classe dopo un certo periodo di tempo
+            setTimeout(() => {
+            icon.classList.remove('rotate-animation');
+            }, 1000);
+        });
+        });
+            </script>
+
+            <style>
+                .rotate-animation {
+        animation: rotate 1s linear infinite;
+        }
+
+        @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+        }
+
+    </style>
+
+    <!-- DOVE LAVORO -->
+    <section>
+        <div id="projects" class="bg-white-500 py-4 container mx-auto text-center mt-72 text-2xl">
+            <div class="custom-title text-3xl md:text-4xl lg:text-5xl hover:scale-110 transition">MY JOB</div>
+            <div class="flex flex-col gap-8"  style="text-align: start; padding: 100px;">
+                <!-- logo -->
+                <a href="https://sunlink.it/"><img src="./img/sunlink_logo.jpg"></a>
+                <div class="flex flex-col gap-2">
+                    <!-- descrizione del lavoro -->
+                    <span class="text-2xl font-semibold mt-4">Front End Developer for Sunlink</span>
+                    <div class="flex justify-center items-center gap-8">
+                        <div class="flex flex-col gap-8">
+                            <div class="flex gap-4">
+                                <p>since June 2023 I have been working at the Lucca company, Sunlink. I deal with the development of the front-end part of the company. I use : Javascript, TypeScript, VueJS, Odoo, PHP, HTML5, CSS, SCSS,Figma</p>
+                            </div>
+                            <a class="under" href="https://www.google.com/maps/place/Sunlink+s.r.l./@43.8261064,10.4995798,16.25z/data=!4m6!3m5!1s0x12d58590f0848d05:0xcaa7aa30ca71fa09!8m2!3d43.8268484!4d10.5022014!16s%2Fg%2F11rysksmcz?entry=ttu">CLICK HERE or the image</a>
+                            <a href="https://www.google.com/maps/place/Sunlink+s.r.l./@43.8261064,10.4995798,16.25z/data=!4m6!3m5!1s0x12d58590f0848d05:0xcaa7aa30ca71fa09!8m2!3d43.8268484!4d10.5022014!16s%2Fg%2F11rysksmcz?entry=ttu"><img src="./img/foto_luogo.png" alt=""></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <style>
-        .rotate-animation {
-  animation: rotate 1s linear infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
+        .under:hover {
+            text-decoration: underline;
+        }
     </style>
 
 
@@ -347,7 +378,7 @@ icons.forEach(icon => {
             background-color: #0e75e3;
             height: 60px;
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
             z-index: 999;
         }
@@ -364,16 +395,16 @@ icons.forEach(icon => {
         color: #000000;
         }
 
-        .navbar {
+        /* .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
+        } */
 
-        .navbar-logo {
+        /* .navbar-logo {
             flex-grow: 1;
             text-align: center;
-        }
+        } */
 
         .dark-mode-toggle {
             margin-left: 10px;
