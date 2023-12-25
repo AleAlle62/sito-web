@@ -2,438 +2,262 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- font -->
-    <script src="https://kit.fontawesome.com/c88a405b1b.js" crossorigin="anonymous"></script>
     <title>Alessio Allegrini</title>
-    <!-- bootstrap  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofGJhccu7FZMyMxyVaK3FjMIVbC5b5kxS" crossorigin="anonymous">
 </head>
-    <!-- NAVBAR  -->
-            <div class="navbar">
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" class="text-black-000 text-2xl">Alessio Allegrini</a>
-        <a href="#" class="navbar-logo flex gap-8 justify-center">
-            <!-- <i class="fa-solid fa-house"></i> -->
-        </a>
-        <label for="dark-mode-toggle" class="dark-mode-toggle">
-            <input type="checkbox" id="dark-mode-toggle"/>
-            <i class="fa-solid fa-sun" style="cursor: pointer;"></i>
-        </label>
-    </div>
-    <!-- FINE NAVBAR -->
+<body class="bg-gray-100">
 
-    <header>
-        <h1 class="ml6">
-            <span class="text-wrapper">
-                <span class="letters">Work In Progress...</span>
-            </span>
-        </h1>
+    <!-- header -->
+    <header class="header-bar bg-white p-4">
+        <div class="logo-container">
+            <img src="img/496-4969711_aa-logo-png-letter-a-logo-png-transparent-removebg-preview.png" alt="Logo" class="max-h-8">
+        </div>
     </header>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <!-- fine header -->
 
+    <!-- parte centrale -->
+    <section class="flex flex-col gap-10">
 
-    <!-- PARTE CENTRALE -->
-    <!-- <section id="giu" style="margin-top: 120px;">
-        <div class="flex justify-center gap-12 items-center">
-            <div>
-                <img src="img/profilo.jpeg" style="border-radius: 10%; height: 280px;">
-            </div>
-            <div>
-                
-                <h1 class="text-xl">Front-end Developer</h1>
-    
-                <div class="flex flex-wrap mt-4" style="width: 550px;">
-                    Since June 2023, I work for SunLink, in Lucca. I'm a Front-end Developer, and I use everyday: <strong>Figma,</strong> <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>TailWind</strong>, <strong>Javascript</strong>, <strong>TypeScript</strong>, <strong>Odoo</strong>But I also know: <strong>PHP</strong>, <strong>Laravel</strong>, <strong>BootStrap</strong>, <strong>C#</strong>.
+        <div class="text-white p-4 flex items-center justify-around gap-8 sm:flex-row text-center" style="margin-top: 50px !important;">
+            <!-- Immagine -->
+            <img src="img/Immagine_PNG-removebg-preview.png" alt="" class="h-auto mb-8 sm:mr-8">
+            <!-- Scritte laterali -->
+            <div class="text-center">
+                <div class="mb-4">
+                    <span class="text-3xl">HI THERE I'M</span>
+                    <div class="text-3xl font-bold">Alessio Allegrini 🎮</div>
                 </div>
-    
-                <div class="mt-4">
-                    <a href="https://www.instagram.com/alessioallegrini_/" target="_blank" class="text-3xl text-pink-500 mx-2">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/alessio-allegrini00/" target="_blank" class="text-3xl text-blue-500 mx-2">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
+                <div class="flex flex-col gap-4">
+                    <span class="bg-green-300 text-black p-2 rounded text-2xl">FRONT END WEB DEVELOPER</span>
                 </div>
             </div>
         </div>
-    </section> -->
-    
-    <!-- FINE PARTE CENTRALE  -->
 
-    <!-- progetti e skill -->
-    <!-- <section>
-        <section id="skills" class="mt-60 bg-white-500 py-4 container mx-auto text-center">
-            <div class="custom-title text-3xl md:text-4xl lg:text-5xl hover:scale-110 transition">MY PROJECTS & SKILLS</div>
-            <div class="mt-32 flex justify-center flex-wrap gap-20">
+        <!-- Roadmap -->
+        <div class="text-4xl" style="color: white; text-align: center; margin-top: 100px;">MY CODING ROADMAP</div>
+        <div class="roadmap flex items-center justify-center">
+            <div class="event">
+                <div class="data">June 2021</div>
+                <p>Finished high school as a surveyor</p>
+            </div>
 
+            <div class="connector"></div>
 
-                <div class="bg-white rounded-lg shadow-lg p-6 w-80 hover:scale-110 transition flex flex-col items-center">
-                    <img src="img/img sito 9.png" alt="Project 1" class="w-32 h-32 object-cover rounded-md">
-                    <div class="text-center mt-4">
-                        <h3 class="text-xl font-semibold text-black">SunLink</h3>
-                        <p class="text-gray-700 mt-2">Creazione della parte Front-end della piattaforma di SunLink per il monitoraggio energetico</p>
-                    </div>
-                    <div class="mt-4 flex gap-4 justify-center flex-wrap">
-                        <i class="fa-brands fa-html5" style="color: orange; font-size: 40px;"></i>
-                        <i class="fa-brands fa-css3-alt" style="color: rgb(0, 47, 255); font-size: 40px;"></i>
-                        <i class="fab fa-js" style="color: rgb(191, 247, 8); font-size: 40px;"></i>
-                        <i class="fa-brands fa-vuejs" style="color: rgb(66, 234, 24); font-size: 40px;"></i>
-                        <img src="img/ts.png" style="height: 40px;">
-                        <img src="img/Odoo.png" style="height: 40px;">
-                        <img src="img/figma.svg" style="height: 40px;">
-                    </div>
-                </div>
+            <div class="event">
+                <div class="data">Sep 2022</div>
+                <p>Started computer scienze university</p>
+            </div>
 
-                <div class="bg-white rounded-lg shadow-lg p-6 w-80 hover:scale-110 transition flex flex-col items-center">
-                    <img src="img/img sito.jpeg" alt="Project 1" class="w-32 h-32 object-cover rounded-md" onclick="window.location.href='https://github.com/AleAlle62/htmlcss-dropbox';" style="cursor: pointer;">
-                    <div class="text-center mt-4">
-                        <h3 class="text-xl font-semibold text-black">DropBox</h3>
-                        <p class="text-gray-700 mt-2">Riproduzione statica del sito di Dropbox usando HTML & CSS</p>
-                    </div>
-                    <div class="mt-4 flex gap-4 justify-center">
-                        <i class="fa-brands fa-html5" style="color: orange; font-size: 40px;"></i>
-                        <i class="fa-brands fa-css3-alt" style="color: rgb(0, 47, 255); font-size: 40px;"></i>
-                    </div>
-                </div>
-                
+            <div class="connector"></div>
 
-                <div class="bg-white rounded-lg shadow-lg p-6 w-80 hover:scale-110 transition flex flex-col items-center">
-                    <img src="img/img sito 2.jpeg" alt="Project 1" class="w-32 h-32 object-cover rounded-md" onclick="window.location.href='https://github.com/AleAlle62/vue-boolflix';" style="cursor: pointer;">
-                    <div class="text-center mt-4">
-                        <h3 class="text-xl font-semibold text-black">Netflix</h3>
-                        <p class="text-gray-700 mt-2">Riproduzione dinamica con chiamate API del sito di Netflix usando HTML, CSS, JavaScript, e VueJS</p>
-                    </div>
-                    <div class="mt-4 flex gap-4 justify-center">
-                        <i class="fa-brands fa-html5" style="color: orange; font-size: 40px;"></i>
-                        <i class="fa-brands fa-css3-alt" style="color: rgb(0, 47, 255); font-size: 40px;"></i>
-                        <i class="fab fa-js" style="color: rgb(191, 247, 8); font-size: 40px;"></i>
-                        <i class="fa-brands fa-vuejs" style="color: rgb(66, 234, 24); font-size: 40px;"></i>
-                    </div>
-                </div>
+            <div class="event">
+                <div class="data">Sep 2023</div>
+                <p>Started Booleand coding course</p>
+            </div>
 
+            <div class="connector"></div>
 
-                <div class="bg-white rounded-lg shadow-lg p-6 w-80 hover:scale-110 transition flex flex-col items-center">
-                    <img src="img/img sito 3.jpeg" alt="Project 1" class="w-32 h-32 object-cover rounded-md" onclick="window.location.href='https://github.com/AleAlle62/vue-vue-boolzapp';" style="cursor: pointer;">
-                    <div class="text-center mt-4">
-                        <h3 class="text-xl font-semibold text-black">Whatsapp</h3>
-                        <p class="text-gray-700 mt-2">Simulazione di Whatsapp con HTML, CSS, JavaScript, e VueJS</p>
-                    </div>
-                    <div class="mt-4 flex gap-4 justify-center">
-                        <i class="fa-brands fa-html5" style="color: orange; font-size: 40px;"></i>
-                        <i class="fa-brands fa-css3-alt" style="color: rgb(0, 47, 255); font-size: 40px;"></i>
-                        <i class="fab fa-js" style="color: rgb(191, 247, 8); font-size: 40px;"></i>
-                        <i class="fa-brands fa-vuejs" style="color: rgb(66, 234, 24); font-size: 40px;"></i>
-                    </div>
-                </div>
+            <div class="event" id="adv-js">
+                <div class="data">May 2023</div>
+                <p>Finish Booleand coding course, started C# course</p>
+            </div>
 
+            <div class="connector"></div>
 
-                <div class="bg-white rounded-lg shadow-lg p-6 w-80 hover:scale-110 transition flex flex-col items-center">
-                    <img src="img/img sito 4.jpeg" alt="Project 1" class="w-32 h-32 object-cover rounded-md" onclick="window.location.href='https://github.com/AleAlle62/html-css-spotifyweb';" style="cursor: pointer;">
-                    <div class="text-center mt-4">
-                        <h3 class="text-xl font-semibold text-black">Spotify</h3>
-                        <p class="text-gray-700 mt-2">Riproduzione di Spotify Web con HTML, CSS</p>
-                    </div>
-                    <div class="mt-4 flex gap-4 justify-center">
-                        <i class="fa-brands fa-html5" style="color: orange; font-size: 40px;"></i>
-                        <i class="fa-brands fa-css3-alt" style="color: rgb(0, 47, 255); font-size: 40px;"></i>
-                    </div>
-                </div>
+            <div class="event">
+                <div class="data">June 2023</div>
+                <p>Started working in SunLink how Front-End Developer</p>
+            </div>
+        </div>
 
-
-                <div class="bg-white rounded-lg shadow-lg p-6 w-80 hover:scale-110 transition flex flex-col items-center">
-                    <img src="img/img sito 5.jpeg" alt="Project 1" class="w-32 h-32 object-cover rounded-md" onclick="window.location.href='https://github.com/AleAlle62/htmlcss-playstation';" style="cursor: pointer;">
-                    <div class="text-center mt-4">
-                        <h3 class="text-xl font-semibold text-black">PlayStation</h3>
-                        <p class="text-gray-700 mt-2">Riproduzione del sito di PlayStation con HTML, CSS</p>
-                    </div>
-                    <div class="mt-4 flex gap-4 justify-center">
-                        <i class="fa-brands fa-html5" style="color: orange; font-size: 40px;"></i>
-                        <i class="fa-brands fa-css3-alt" style="color: rgb(0, 47, 255); font-size: 40px;"></i>
-                    </div>
+        <!-- sunlink -->
+        <div class="text-4xl flex items-center justify-center gap-6" style="color: white; text-align: center; margin-top: 100px;">
+            <span>MY JOB</span> 
+            <img src="img/sunlink.jpeg" alt="" style="border-radius: 10px; height: 50px;">
+        </div>
+        <div class="flex justify-around items-center roadmap">
+            <div class="event-2 flex flex-col items-center cento">
+                <div class="text-2xl">what am I working on now</div>
+                <div class="none" style="width: 70%;">I am in charge of the front-end team of software development to monitor consumption and production of companies that use renewable energy</div>
+                <div class="flex gap-4 items-center justify-center mt-5">
+                    <img class="small" style="width: 80px;" src="img/typescript-removebg-preview.png" alt="">
+                    <img class="small" style="width: 50px;" src="img/png-transparent-logo-html-html5-removebg-preview.png" alt="">
+                    <img class="small" style="width: 120px;" src="img/2560px-Odoo_logo.svg-removebg-preview.png" alt="">
+                    <img class="small" style="width: 50px;" src="img/Vue-removebg-preview.png" alt="">
+                    <img class="small" style="width: 50px;" src="img/png-transparent-figma-app-logo-tech-companies-thumbnail-removebg-preview.png" alt="">
                 </div>
             </div>
-        </section>
+
+            <div class="connector"></div>
+
+            <!-- immagine del progetto -->
+            <div style="width: 50%;" class="cento">
+                <img style=" border-radius: 10px;" src="img/Screenshot 2023-12-25 alle 01.30.58 (2).png" alt="">
+            </div>
+        </div>
         
-    </section> -->
-    <!-- FINE SKILL -->
-
-
-
-    <!-- FOOTER -->
-    <footer id="contact" class="bg-blue-700 py-6 mt-64">
-        <div class="container mx-auto px-4">
-        <div class="flex flex-wrap items-center justify-around">
-            <div class="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-0">
-            <h3 class="text-white text-lg font-semibold">Social</h3>
-            <ul class="mt-4">
-                <li>
-                    <a href="https://www.instagram.com/alessioallegrini_/" class="text-gray-400 hover:text-white transition duration-300">Instagram</a>
-                    <i class="fa-brands fa-instagram" style="color: #f5f5f5;"></i>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/alessio-allegrini00/" class="text-gray-400 hover:text-white transition duration-300">Linkedin</a>
-                    <i class="fa-brands fa-linkedin" style="color: #ffffff;"></i>
-                </li>
-                <li>
-                    <a href="https://github.com/AleAlle62" class="text-gray-400 hover:text-white transition duration-300">GitHub</a>
-                    <i class="fa-brands fa-github" style="color: #ffffff;"></i>
-                </li>
-            </ul>
-            </div>
-            <div class="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-0">
-            <h3 class="text-white text-lg font-semibold">Contatti</h3>
-            <p class="text-gray-400 mt-4 hover:text-white transition duration-300">Email: allegrini@sunlink.it</p>
-            <p class="text-gray-400 hover:text-white transition duration-300">Telefono: +39 329 612 4488</p>
-            </div>
+        <!-- Footer -->
+        
+        <div class="text-4xl" style="color: white; text-align: center; margin-top: 100px;">CONTACTS
         </div>
-        <hr class="border-gray-700 my-6">
-        <p class="text-gray-400 text-sm text-center">© 2023 Alessio Allegrini. Tutti i diritti riservati.</p>
+        <div class="text-2xl" style="color: white; text-align: center;">(here you can find my social networks and all my works)
         </div>
-    </footer>
-    <!-- FINE FOOTER --> 
-    
+
+        <div style="color: white; justify-content: space-around !important;" class="text-2xl flex items-center justify-between gap-20 roadmap">
+            <a href="https://www.instagram.com/alessioallegrini_/">
+                <div class="event-2 flex items-center justify-around" style="width: 260px;">
+                    <span>INSTAGRAM</span>
+                    <img style="height: 50px;" src="img/purple-gradiend-social-media-logo_197792-1883-removebg-preview.png" alt="">
+                </div>
+            </a>
+            <a href="https://github.com/AleAlle62">
+                <div class="event-2 flex items-center justify-around" style="width: 260px;">
+                    <span>GITHUB</span>
+                    <img style="height: 50px;" src="img/GitHub-Mark-ea2971cee799-removebg-preview.png" alt="">
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/alessio-allegrini00/">
+                <div class="event-2 flex items-center justify-around" style="width: 260px;">
+                    <span>LINKEDIN</span>
+                    <img style="height: 50px;" src="img/480px-LinkedIn_logo_initials-removebg-preview.png" alt="">
+                </div>
+            </a>
+        </div>
 
 
-    <!-- STILE -->
-    <style>
+    </section>
+</body>
+</html>
 
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #0e75e3;
-            height: 60px;
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .header-bar {
+        background-color: rgb(255, 255, 255);
+        color: black;
+        display: flex;
+        border-bottom: 1px solid black;
+        justify-content: space-around;
+        align-items: center;
+        padding: 16px;
+    }
+
+    .logo-container img {
+        max-height: 40px;
+    }
+
+    /* Fine header */
+
+    /* Inizio parte centrale */
+    section {
+        background-color: #212121;
+    }
+
+    @media (max-width: 640px) {
+        /* Disposizione su schermi di almeno 640px di larghezza (tablet e oltre) */
+        .text-center {
             display: flex;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 999;
+            flex-direction: column;
         }
 
-        .navbar-logo {
-            color: #fff;
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-    
-        body {
-        background-color: #ffffff;
-        color: #000000;
+        .roadmap {
+            flex-direction: column;
+            align-items: center; /* Centra verticalmente nella versione mobile */
         }
 
-        /* .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        } */
-
-        /* .navbar-logo {
-            flex-grow: 1;
-            text-align: center;
-        } */
-
-        .dark-mode-toggle {
-            margin-left: 10px;
+        .connector {
+            height: 25px !important;
+            width: 2px !important;
+            background-color: #75f9bf;
+            margin: 20px; /* Aggiunto margine per separare le frecce */
         }
-
-        .dark-mode-toggle input[type="checkbox"] {
+        .none {
             display: none;
         }
 
-        .fa-sun {
-            font-size: 24px;
-            margin-right: 8px;
+        .small {
+            height: 35px;
         }
 
-        .dark {
-            background-color: #222222;
-            color: #ffffff;
+        .cento {
+            width: 100%  !important;
         }
-
-        @keyframes rainbow-animation {
-
-            0% { color: red; }
-            14.28% { color: orange; }
-            28.57% { color: yellow; }
-            42.85% { color: green; }
-            57.14% { color: blue; }
-            71.42% { color: indigo; }
-            85.71% { color: violet; }
-            100% { color: red; }
-            }
-            .custom-title {
-            animation: rainbow-animation 5s linear infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-            @keyframes color-change {
-            0%, 50% {
-                color: blue;
-            }
-            51%, 100% {
-                color: red;
-            }
-        }
-
-        .freccia {
-            font-size: x-large;
-            color: rgb(0, 47, 255);
-            animation: bounce 1s infinite;
-            animation-delay: 0.5s;
-            animation-timing-function: ease-in-out;
-            cursor: pointer;
-            transition: color 0.5s;
-        }
-        .freccia:hover {
-            animation-play-state: paused;
-        }
-
-        .freccia:active {
-            animation-play-state: running;
-            animation: color-change 2s infinite;
-        }
-
-        .ml6 {
-            padding-top: 200px;
-            text-align: center;
-            font-weight: 900;
-            font-size: 3.3em;
-        }
-
-        .ml6 .letter {
-            display: inline-block;
-            line-height: 1em;
-            animation: rainbow 4s infinite;
-        }
-
-    @keyframes rainbow {
-    0% {
-        color: #ff0000; /* rosso */
-    }
-    14% {
-        color: #ff7f00; /* arancione */
-    }
-    28% {
-
-    }
-    42% {
-        color: #00ff00; /* verde */
-    }
-    57% {
-        color: #0000ff; /* blu */
-    }
-    71% {
-        color: #8a2be2; /* indaco */
-    }
-    85% {
-        color: #ff00ff; /* viola */
-    }
-    100% {
-        color: #ff0000; /* rosso */
-    }
     }
 
-    
-        .ml6 .text-wrapper {
-          /* display: inline-block; */
-            padding-top: 0.2em;
-            padding-right: 0.05em;
-            padding-bottom: 0.1em;
-            overflow: hidden;
-        }
-    
-        .ml6 .letter {
-            display: inline-block;
-            line-height: 1em;
-        }
-    
-        @media (max-width: 768px) {
-            .ml6 {
-            font-size: 2.2em;
-            }
-        }
+    /* Roadmap */
+    .roadmap {
+        margin-top: 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
 
-        .rotate-animation {
-        animation: rotate 1s linear infinite;
-        }
+    .connector {
+        height: 2px;
+        width: 30px;
+        background-color: #75f9bf;
+    }
 
-        @keyframes rotate {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
-        }
+    .event {
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        padding: 10px;
+        border: 1px solid #75f9bf;
+        border-radius: 8px;
+        background-color: #212121;
+        color: #fff;
+        margin-bottom: 10px;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
 
-        .under:hover {
-            text-decoration: underline;
-        }
-    </style>
-    <!-- FINE STILE  -->
-    
-    <!-- JAVASCRIPT -->
-    <script>
+    .event:hover {
+        background-color: #75f9bf;
+        color: #212121;
+    }
 
-        var darkModeToggle = document.getElementById('dark-mode-toggle');
-        var body = document.body;
-        
-        darkModeToggle.addEventListener('change', function() {
-            if (this.checked) {
-                body.classList.add('dark');
-            } else {
-                body.classList.remove('dark');
-            }
-        });
+    .event h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
 
-        // Wrap every letter in a span
-        var textWrapper = document.querySelector('.ml6 .letters');
-        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-    
-        anime.timeline({ loop: true })
-        .add({
-            targets: '.ml6 .letter',
-            translateY: ["0.5em", 0],
-            translateZ: 0,
-            duration: 750,
-            delay: (el, i) => 50 * i
-        }).add({
-            targets: '.ml6',
-            opacity: 0,
-            duration: 1000,
-            easing: "easeOutExpo",
-            delay: 1000
-        });
+    .event-2 {
+        width: 40%;
+        height: 80%;
+        text-align: center;
+        padding: 10px;
+        border: 1px solid #75f9bf;
+        border-radius: 8px;
+        background-color: #212121;
+        color: #fff;
+        margin-bottom: 10px;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
 
-        const icons = document.querySelectorAll('#skill i');
+    .event-2:hover {
+        background-color: #75f9bf;
+        color: #212121;
+    }
 
-        // Aggiungi evento di click a ciascuna icona
-        icons.forEach(icon => {
-        icon.addEventListener('click', () => {
-            // Aggiungi una classe per l'effetto divertente
-            icon.classList.add('rotate-animation');
-            
-            // Rimuovi la classe dopo un certo periodo di tempo
-            setTimeout(() => {
-            icon.classList.remove('rotate-animation');
-            }, 1000);
-        });
-        });
-    </script>
-</body>
-</html>
+    .event-2 h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .data {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+</style>
