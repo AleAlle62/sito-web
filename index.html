@@ -20,7 +20,7 @@
     <!-- parte centrale -->
     <section class="flex flex-col gap-10">
 
-        <div class="text-white p-4 flex items-center justify-around gap-8 sm:flex-row text-center" style="margin-top: 50px !important;">
+        <div class="text-white p-4 flex items-center justify-around gap-32 sm:flex-row text-center" style="margin-top: 50px !important; max-width: 100%; justify-content: center; align-items: center;">
             <!-- Immagine -->
             <img src="img/Immagine_PNG-removebg-preview.png" alt="" class="h-auto mb-8 sm:mr-8">
             <!-- Scritte laterali -->
@@ -30,17 +30,17 @@
                     <div class="text-3xl font-bold">Alessio Allegrini 🎮</div>
                 </div>
                 <div class="flex flex-col gap-4">
-                    <span class="bg-green-300 text-black p-2 rounded text-2xl">FRONT END WEB DEVELOPER</span>
+                    <span id="developerText" class="bg-green-300 text-black p-2 rounded text-2xl hidden">FRONT-END-WEB-DEVELOPER</span>
                 </div>
             </div>
         </div>
 
         <!-- Roadmap -->
-        <div class="text-4xl" style="color: white; text-align: center; margin-top: 100px;">MY CODING ROADMAP</div>
-        <div class="roadmap flex items-center justify-center">
+        <div class="text-4xl" style="color: white; text-align: center; margin-top: 100px;;">MY CODING ROADMAP</div>
+        <div class="roadmap flex items-center justify-center" style="max-width: 100%; justify-content: center; align-items: center">
             <div class="event">
                 <div class="data">June 2021</div>
-                <p>Finished high school as a surveyor</p>
+                <div>Finished high school as a surveyor</div>
             </div>
 
             <div class="connector"></div>
@@ -77,7 +77,7 @@
             <span>MY JOB</span> 
             <img src="img/sunlink.jpeg" alt="" style="border-radius: 10px; height: 50px;">
         </div>
-        <div class="flex justify-around items-center roadmap">
+        <div class="flex justify-around items-center roadmap" style="max-width: 100%; justify-content: center; align-items: center">
             <div class="event-2 flex flex-col items-center cento">
                 <div class="text-2xl">what am I working on now</div>
                 <div class="none" style="width: 70%;">I am in charge of the front-end team of software development to monitor consumption and production of companies that use renewable energy</div>
@@ -105,7 +105,7 @@
         <div class="text-2xl" style="color: white; text-align: center;">(here you can find my social networks and all my works)
         </div>
 
-        <div style="color: white; justify-content: space-around !important;" class="text-2xl flex items-center justify-between gap-20 roadmap">
+        <div style="color: white; max-width: 100%; justify-content: center; align-items: center " class="text-2xl flex items-center justify-between gap-20 roadmap">
             <a href="https://www.instagram.com/alessioallegrini_/">
                 <div class="event-2 flex items-center justify-around" style="width: 260px;">
                     <span>INSTAGRAM</span>
@@ -130,6 +130,11 @@
     </section>
 </body>
 </html>
+
+
+
+
+
 
 <style>
     body {
@@ -260,4 +265,37 @@
         font-size: 25px;
         margin-bottom: 20px;
     }
+
+    
+
 </style>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Ottieni l'elemento del testo del developer
+        const developerText = document.getElementById("developerText");
+
+        // Funzione per mostrare il testo con effetto di scrittura
+        function showDeveloperText() {
+            // Mostra l'elemento del testo
+            developerText.classList.remove("hidden");
+
+            const text = developerText.innerText;
+            developerText.innerText = "";
+
+            let i = 0;
+            const interval = setInterval(function () {
+                if (i < text.length) {
+                    developerText.innerText += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 200); // Intervallo tra le lettere (in millisecondi)
+        }
+
+        // Imposta un ritardo prima di mostrare il testo
+        setTimeout(showDeveloperText, 2000); // Ritardo iniziale in millisecondi
+    });
+</script>
