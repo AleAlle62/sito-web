@@ -30,7 +30,9 @@
                     <div class="text-3xl font-bold">Alessio Allegrini 🎮</div>
                 </div>
                 <div class="flex flex-col gap-4">
-                    <span id="developerText" class="bg-green-300 text-black p-2 rounded text-2xl hidden">FRONT-END-WEB-DEVELOPER</span>
+                    <a href="https://en.wikipedia.org/wiki/Front-end_web_development">
+                        <span id="developerText" class="bg-green-300 text-black p-2 rounded text-2xl hidden">FRONT-END-WEB-DEVELOPER</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -160,9 +162,13 @@
     /* Fine header */
 
     /* Inizio parte centrale */
+    /* Inizio parte centrale */
     section {
-        background-color: #212121;
+        /* background-color: #212121; */
+        background-image: url(img/tile_background.png); 
+        position: relative;
     }
+
 
     @media (max-width: 640px) {
         /* Disposizione su schermi di almeno 640px di larghezza (tablet e oltre) */
@@ -212,23 +218,33 @@
     }
 
     .event {
-        width: 200px;
-        height: 200px;
-        text-align: center;
-        padding: 10px;
-        border: 1px solid #75f9bf;
-        border-radius: 8px;
-        background-color: #212121;
-        color: #fff;
-        margin-bottom: 10px;
-        position: relative;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #75f9bf;
+    border-radius: 8px;
+    background-color: #212121;
+    color: #fff;
+    margin-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+    .event::before {
+        content: '';
+        position: absolute;
+        top: 100%; /* Inizia dal basso */
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(transparent, #75f9bf); /* Gradiente trasparente a verde */
+        transition: top 0.3s ease-in-out; /* Animazione della transizione */
     }
 
-    .event:hover {
-        background-color: #75f9bf;
-        color: #212121;
+    .event:hover::before {
+        top: 0; /* Al passaggio del mouse, imposta top a 0 per riempire dall'alto verso il basso */
     }
 
     .event h3 {
@@ -254,6 +270,8 @@
     .event-2:hover {
         background-color: #75f9bf;
         color: #212121;
+        transition: 1.2s ;
+        scale: 1.05;
     }
 
     .event-2 h3 {
@@ -278,24 +296,23 @@
 
         // Funzione per mostrare il testo con effetto di scrittura
         function showDeveloperText() {
-            // Mostra l'elemento del testo
-            developerText.classList.remove("hidden");
+        // Mostra l'elemento del testo
+        developerText.classList.remove("hidden");
 
-            const text = developerText.innerText;
-            developerText.innerText = "";
+        const text = developerText.innerText;
+        developerText.innerText = "";
 
-            let i = 0;
-            const interval = setInterval(function () {
-                if (i < text.length) {
-                    developerText.innerText += text.charAt(i);
-                    i++;
-                } else {
-                    clearInterval(interval);
-                }
-            }, 200); // Intervallo tra le lettere (in millisecondi)
-        }
-
-        // Imposta un ritardo prima di mostrare il testo
-        setTimeout(showDeveloperText, 2000); // Ritardo iniziale in millisecondi
+        let i = 0;
+        const interval = setInterval(function () {
+            if (i < text.length) {
+                developerText.innerText += text.charAt(i);
+                i++;
+            } else {
+                clearInterval(interval);
+            }
+        }, 200); // Intervallo tra le lettere (in millisecondi)
+    }
+        // Imposta un intervallo per eseguire la funzione ogni 4 secondi
+        setInterval(showDeveloperText, 5500); // Esegui ogni 4 secondi
     });
 </script>
