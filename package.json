@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "feather-icons": "^4.29.1"
+    "feather-icons": "^4.29.1",
+    "swiper": "^11.1.0"
   }
 }
