@@ -3,158 +3,281 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alessio Allegrini</title>
-    <style>
-      /* CSS */
-      body {
-        background-color: #000;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        font-family: "Arial", sans-serif;
-      }
-
-      .countdown-container {
-        text-align: center;
-        padding: 20px;
-      }
-
-      h1 {
-        font-size: 3rem;
-        letter-spacing: 5px;
-        color: #fff;
-        text-shadow: 0 0 10px rgba(255, 0, 0, 0.7),
-          0 0 20px rgba(255, 0, 0, 0.5), 0 0 30px rgba(255, 0, 0, 0.3);
-      }
-
-      .countdown {
-        display: flex;
-        gap: 20px;
-        margin-top: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      .countdown div {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 20px;
-        border-radius: 10px;
-        font-size: 2rem;
-        width: 100px;
-        height: 100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-      }
-
-      .countdown span {
-        font-size: 2.2rem;
-        margin-top: 10px;
-        font-weight: bold;
-      }
-
-      /* Responsive styles */
-      @media (max-width: 768px) {
-        h1 {
-          font-size: 2.5rem;
-        }
-
-        .countdown {
-          gap: 10px;
-        }
-
-        .countdown div {
-          font-size: 1.8rem;
-          width: 80px;
-          height: 80px;
-        }
-
-        .countdown span {
-          font-size: 1.8rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        h1 {
-          font-size: 2rem;
-        }
-
-        .countdown {
-          gap: 5px;
-        }
-
-        .countdown div {
-          font-size: 1.5rem;
-          width: 70px;
-          height: 70px;
-        }
-
-        .countdown span {
-          font-size: 1.5rem;
-        }
-      }
-    </style>
+    <title>Guida agli Orologi da Polso</title>
   </head>
   <body>
-    <!-- HTML -->
-    <div class="countdown-container">
-      <h1>Sito in preparazione</h1>
-      <div class="countdown">
-        <div>
-          <span id="days">00</span>
-        </div>
-        <div>
-          <span id="hours">00</span>
-        </div>
-        <div>
-          <span id="minutes">00</span>
-        </div>
-        <div>
-          <span id="seconds">00</span>
-        </div>
+    <div class="watch-bg">
+      <h1 style="color: white; background-color: black">
+        Cose da sapere prima di comprare un orologio
+      </h1>
+      <div class="scroll-arrow">
+        <div style="font-size: 20px !important">scorri verso il basso</div>
+        <div>↓</div>
       </div>
+      <!-- Freccia per scorrere verso il basso -->
     </div>
 
-    <!-- JavaScript -->
-    <script>
-      function countdownToChristmas() {
-        const christmas = new Date(
-          "December 25, " + new Date().getFullYear() + " 00:00:00"
-        ).getTime();
-        const now = new Date().getTime();
-        const timeRemaining = christmas - now;
+    <!-- Sezione sui tipi di movimento -->
+    <section class="movimento">
+      <h2>1) Tipi di Movimento</h2>
+      <p>
+        Gli orologi da polso possono avere diversi tipi di movimento che
+        determinano il loro funzionamento:
+      </p>
+      <ul>
+        <li>
+          <strong>Meccanico:</strong> Utilizza un meccanismo a molla che
+          richiede una carica manuale. Ogni tot di tempo bisogna ricaricare la
+          girare la corona per fare in modo che le lancette non si fermino
+          <div style="color: green">
+            movimento ottimo, infatti i prezzi salgono
+          </div>
+        </li>
+        <li>
+          <strong>Automatico:</strong> Simile al meccanico, ma si carica con i
+          movimenti del polso. Se non viene indossato per tanto tempo le
+          lancette si fermano
+          <div style="color: green">
+            movimento ottimo, infatti i prezzi salgono
+          </div>
+        </li>
+        <li>
+          <strong>Al quarzo:</strong> Alimentato da una batteria, è preciso e
+          richiede poca manutenzione.
+          <div style="color: red">
+            classico degli orologi di bassa fascia, poco raccomandato
+          </div>
+        </li>
+      </ul>
+    </section>
 
-        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor(
-          (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
-        );
-        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+    <!-- Sezione sui tipi di cinturini -->
+    <section class="cinturini">
+      <h2>2) Tipi di Cinturini</h2>
+      <p>
+        I cinturini sono disponibili in vari materiali e influenzano l'aspetto e
+        il comfort:
+      </p>
+      <ul>
+        <li>
+          <strong>Pelle:</strong> Elegante e classica, perfetta per look
+          formali.
+        </li>
+        <li>
+          <strong>Acciaio inossidabile:</strong> Robusto e resistente, spesso
+          usato negli orologi sportivi.
+        </li>
+        <li>
+          <strong>Nylon o gomma:</strong> Materiali comodi e pratici, ideali per
+          attività sportive.
+        </li>
+      </ul>
+    </section>
 
-        document.getElementById("days").innerText =
-          days < 10 ? "0" + days : days;
-        document.getElementById("hours").innerText =
-          hours < 10 ? "0" + hours : hours;
-        document.getElementById("minutes").innerText =
-          minutes < 10 ? "0" + minutes : minutes;
-        document.getElementById("seconds").innerText =
-          seconds < 10 ? "0" + seconds : seconds;
+    <!-- Sezione sui tipi di orologi -->
+    <section class="tipi-orologi">
+      <h2>3) Tipi di Orologi</h2>
+      <p>Ci sono diversi tipi di orologi, ciascuno con uno stile specifico:</p>
+      <ul>
+        <li>
+          <strong>
+            <a href="https://www.google.com/search?client=firefox-b-d&sca_esv=2fef05e0321082e1&sxsrf=ADLYWIIppMbZxxgRVQhU_dcdIYv9OJM_3A:1731245662521&q=dress+watch&udm=2&fbs=AEQNm0Be9hsxO5zOUoY5v2srYNPRIvTz_02aG-_CVE5t-hWDE1VEgRZgwAleAEAQCRBuIW5CuqGOFicUrhvwGbk1f-wNX-IL4kHbj6Uk0nkH-7xw7eqfRRMol6EK6XOiINVe2vDuSXM-4rE3ttyESVIxlUUM3g2nJxP2nXFZzyp5Eyk6spzizArUHg7uwCp6YvZref8_Y2zG&sa=X&ved=2ahUKEwiov-7V8NGJAxVV_7sIHXhcF2UQtKgLegQILRAB&biw=2560&bih=942">
+              Dress Watch:
+            </strong> 
+            </a>
+            Elegante e minimale, perfetto per eventi
+          formali.
+        </li>
+        <li>
+          <strong>
+          <a href="https://www.google.com/search?q=dayli+watch&client=firefox-b-d&sca_esv=2fef05e0321082e1&udm=2&biw=2560&bih=942&sxsrf=ADLYWIJ5_Y918lHJllgsFoDQhtZMf6Hbbw%3A1731245666010&ei=YrYwZyi26e_1D7zR2MAE&ved=0ahUKEwioucPX8NGJAxW29LsIHbwoFkgQ4dUDCBA&uact=5&oq=dayli+watch&gs_lp=EgNpbWciC2RheWxpIHdhdGNoMggQABgTGAcYHjIIEAAYExgHGB4yCBAAGBMYBxgeMggQABgTGAcYHjIIEAAYExgHGB4yCBAAGBMYBxgeMggQABgTGAcYHjIKEAAYExgHGAoYHjIIEAAYExgHGB4yChAAGBMYBxgKGB5IgBZQpAxYrxNwA3gAkAEBmAHNA6ABvQmqAQkwLjQuMS4wLjG4AQPIAQD4AQGYAgagAosDwgIKEAAYgAQYQxiKBcICBRAAGIAEwgIGEAAYBxgewgIEECMYJ8ICCBAAGAcYChgemAMAiAYBkgcDMy4zoAfVJA&sclient=img
+          ">
+          Daily Watch:</strong> 
+        </a>
+          
+          Disegnato per un uso quotidiano, è
+          versatile e pratico.
+        </li>
+        <li>
+          <strong>
+            <a href="https://www.google.com/search?q=sport+watch&client=firefox-b-d&sca_esv=2fef05e0321082e1&udm=2&biw=2560&bih=942&sxsrf=ADLYWIInd0YLC8v-qXmMkFcHh5S8ohCQVA%3A1731245802766&ei=6rYwZ_yyLrqD9u8Py53akQY&ved=0ahUKEwj8z96Y8dGJAxW6gf0HHcuONmIQ4dUDCBA&uact=5&oq=sport+watch&gs_lp=EgNpbWciC3Nwb3J0IHdhdGNoMggQABgTGAcYHjIIEAAYExgHGB4yCBAAGBMYBxgeMggQABgTGAcYHjIIEAAYExgHGB4yCBAAGBMYBxgeMggQABgTGAcYHjIIEAAYExgHGB4yCBAAGBMYBxgeMggQABgTGAcYHkiJClDvBVjUCXACeACQAQCYAawBoAGJBKoBAzAuNLgBA8gBAPgBAZgCBKAC7AHCAgkQABiABBgTGArCAggQABgTGAoYHsICChAAGBMYBxgKGB6YAwDiAwUSATEgQIgGAZIHAzIuMqAHlBc&sclient=img">
 
-        if (timeRemaining < 0) {
-          clearInterval(interval);
-          document.querySelector(".countdown-container").innerHTML =
-            "<h1>Buon Natale!</h1>";
-        }
-      }
+              Sport Watch:
+            </a>
+          </strong> Resistente e spesso impermeabile, ideale
+          per attività fisiche.
+        </li>
+        <li>
+          <strong>
+            <a href="https://www.google.com/search?q=vintage+watch&client=firefox-b-d&sca_esv=2fef05e0321082e1&udm=2&biw=2560&bih=942&sxsrf=ADLYWIJ-gZja9nw95T62EogXdMPoKtiHfA%3A1731245849791&ei=GbcwZ7WBMNaC9u8PjLmvyAo&ved=0ahUKEwj18ZSv8dGJAxVWgf0HHYzcC6kQ4dUDCBA&uact=5&oq=vintage+watch&gs_lp=EgNpbWciDXZpbnRhZ2Ugd2F0Y2gyCBAAGBMYBxgeMggQABgTGAcYHjIIEAAYExgHGB4yCBAAGBMYBxgeMggQABgTGAcYHjIIEAAYExgHGB4yCBAAGBMYBxgeMggQABgTGAcYHjIIEAAYExgHGB4yCBAAGBMYBxgeSMYMUIAGWKALcAJ4AJABAJgBhgGgAY8FqgEDMS41uAEDyAEA-AEBmAIFoALUAsICChAAGIAEGEMYigXCAgUQABiABMICBhAAGAcYHpgDAIgGAZIHAzIuM6AH6iE&sclient=img">
 
-      const interval = setInterval(countdownToChristmas, 1000);
-    </script>
+              Vintage watch:
+            </a>
+          </strong> Orologi vintage, spesso con cinturino in pelle
+        </li>
+        <li>
+          <strong>
+            <a href="https://www.google.com/search?q=chronograph+watch&client=firefox-b-d&sca_esv=2fef05e0321082e1&udm=2&biw=2560&bih=942&sxsrf=ADLYWIIOC9xXavJ6z07VJUpWvwIlyHOW7w%3A1731245906690&ei=UrcwZ5rbKfuO9u8PgJDAsA8&ved=0ahUKEwiazKXK8dGJAxV7h_0HHQAIEPYQ4dUDCBA&uact=5&oq=chronograph+watch&gs_lp=EgNpbWciEWNocm9ub2dyYXBoIHdhdGNoMgUQABiABDIFEAAYgAQyBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgQQABgeMgQQABgeMgQQABgeSJUTULEEWKYScAJ4AJABAJgBgQGgAb4IqgEDNi41uAEDyAEA-AEBmAIKoAKoBsICChAAGIAEGEMYigXCAgsQABiABBixAxiDAcICCBAAGAcYChgewgIIEAAYExgHGB6YAwCIBgGSBwM3LjOgB8xB&sclient=img">
+
+              Cronografi:
+            </a>
+          </strong> Orologi con complicazioni, ovvero oltre a minuti e secondi ci sono pure il timer e altre funzioni
+        </li>
+        <li>
+          <strong>
+            <a href="https://www.google.com/search?q=day+date+watch&client=firefox-b-d&sca_esv=2fef05e0321082e1&udm=2&biw=2560&bih=942&sxsrf=ADLYWII8iJqjqtEmO5Xv5JMczphjcsTH_g%3A1731245995386&ei=q7cwZ-uXF-Tt7_UP4ubHuQk&ved=0ahUKEwirmcv08dGJAxXk9rsIHWLzMZcQ4dUDCBA&uact=5&oq=day+date+watch&gs_lp=EgNpbWciDmRheSBkYXRlIHdhdGNoMgUQABiABDIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yCBAAGAcYHhgPSMMOUNsEWPULcAJ4AJABAJgBe6ABmgaqAQM1LjO4AQPIAQD4AQGYAgigAu4EwgIKEAAYgAQYQxiKBcICCBAAGBMYBxgewgIIEAAYBxgKGB6YAwCIBgGSBwM1LjOgB-wt&sclient=img">
+              Day o Day Date:
+            </a>
+          </strong> Orologi con la data, o la data e il giorno
+        </li>
+      </ul>
+      <strong>
+
+        <div>queste sono le principali categorie ma c'e' ne sono un sacco ancora, controlla su: 
+          <a href="https://www.chrono24.it/search/categories.htm">Chrono24</a>
+        </div>
+      </strong>
+    </section>
+
+    <!-- Sezione sui marchi famosi -->
+    <section class="marchi-famosi">
+      <h2>4) Marchi Famosi</h2>
+      <p>Marchi famosi brand di lusso</p>
+      <ul>
+        <li>A. Lange & Söhne</li>
+        <li>Audemars Piguet</li>
+        <li>Rolex</li>
+        <li>Omega</li>
+        <li>Breitling</li>
+        <li>Tudor</li>
+        <li>Cartier</li>
+        <li>Pathek Philippe</li>
+        <li>Panerai</li>
+        <li>Richard Mille</li>
+        <li>Jacob & Co</li>
+      </ul>
+      <p>Marchi famosi brand economici</p>
+      <ul>
+        <li>Seiko</li>
+        <li>Casio</li>
+        <li>Fossil</li>
+        <li>Sector</li>
+        <li>Bulova</li>
+        <li>Tissot</li>
+        <li>Hamilton</li>
+        <li>Citizen</li>
+        <li>Timex</li>
+      </ul>
+    </section>
+    <section class="marchi-famosi">
+      <h2>5) Quelli da evitare</h2>
+      <p>Orologi da evitare di comprare assolutamente, Chip, con movimenti scadenti e di brutta manifattura</p>
+      <ul>
+        <li>Ferrari</li>
+        <li>Maserati</li>
+        <li>Daniel Wallington</li>
+        <li>Orolgi da centro commerciale</li>
+        <li>Festina</li>
+        <li>Pagani Design</li>
+      </ul>
+    </section>
+    <section class="marchi-famosi">
+      <h2>6) Consiglio su cosa comprare all'inizio</h2>
+      <p>Come entry-level sarebbe bene comprare un orologio versatile, che vada bene sia per occasiani eleganti che sportive.</p>
+      <div>Quindi come elementi si ha: 
+        <ul>
+          <li>Movimento meccanico/automatico</li>
+          <li>Cinturino in acciaio di base pero' intercambiabile</li>
+          <li>Poche complicazioni</li>
+        </ul>
+      </div>
+      <strong>
+
+        ed ecco una lista dei migliori: <a href="https://www.amazon.it/Orologi-Seiko/s?rh=n%3A524009031%2Cp_4%3ASeiko">Clicca qui</a>
+      </strong>
+    </section>
+
   </body>
 </html>
+
+<style>
+  /* Stile per il titolo di benvenuto */
+  .watch-bg {
+    background-image: url("/img/background-many-watches-is-black-color_1040322-16494.avif");
+    height: 100vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+  }
+
+  /* Stile per la freccia di scroll */
+  .scroll-arrow {
+    font-size: 4rem;
+    color: white;
+    position: absolute;
+    bottom: 30px;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+  }
+
+  /* Animazione della freccia */
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+
+  /* Stile per le sezioni del contenuto */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+
+  section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  h2 {
+    color: #1e1e1e;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Stile per migliorare l’aspetto su dispositivi mobili */
+  @media (max-width: 600px) {
+    .watch-bg h1 {
+      font-size: 1.5rem;
+      padding: 0 1rem;
+    }
+    section {
+      padding: 1rem;
+    }
+    ul {
+      margin-left: 1rem;
+    }
+  }
+</style>
